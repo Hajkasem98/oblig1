@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        div{
+            margin-bottom: 16px;
+        }
+        button{
+            margin-top: 16px;
+        }
+        strong{
+            color: #FF0000;
+        }
+    </style>
+    <script src="index.js"></script>
+</head>
+<body>
+
+<h1>Bestilling av kinobiletter</h1>
+<form id="billett_form">
+    <div>
+        <label for="Film">Velg film:</label>
+        <select id="Film">
+            <option selected>Velg film her</option>
+            <option>Fast 5</option>
+            <option>Security</option>
+            <option>Black Panther</option>
+            <option>Emancipation</option>
+            <option>The Banshees of Inisherin</option>
+            <option>Never Back Down</option>
+            <option>Avatar: The Way of Water</option>
+        </select>
+        <strong id="check_selected"></strong>
+    </div>
+    <div>
+        <label for="Antall">Antall:</label>
+        <input type="text" name="Antall" id="Antall" size="1px">
+        <strong id="sjekk_antall"></strong>
+    </div>
+
+    <table>
+
+        <td>Fornavn</td>
+        <td><input type="text" name="Fornavn" id="Fornavn"></td>
+        <td><strong id="sjekk_fornavn"></strong></td>
+
+        </tr>
+        <tr>
+            <td>Etternavn</td>
+            <td><input type="text" name="Etternavn" id="Etternavn"></td>
+            <td><strong id="sjekk_etternavn"></strong></td>
+
+        </tr>
+        <tr>
+            <td>Telefonnr</td>
+            <td><input type="text" name="Telefon" id="Telefon" placeholder="123-456-78"></td>
+            <td><strong id="sjekk_telefon"></strong></td>
+        </tr>
+        <tr>
+            <td>Epost</td>
+            <td><input type="text" name="Epost" id="Epost" placeholder="@exemple.com"></td>
+            <td><strong id="sjekk_epost"></strong></td>
+
+        </tr>
+
+    </table>
+</form>
+
+<button onclick="kjøpBillett()">Kjøp billett</button>
+<h2>Alle billetter</h2>
+<label id="resutat"></label>
+<button onclick="clearHistory()">Slett alle billettene</button>
+
+
+</body>
+</html>
